@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'JujutsuKaisen', sans-serif;
+  background: linear-gradient(135deg, #2c151c, #1f2a30, #0a0f12);
+  color: #cbbdb1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+@font-face {
+  font-family: 'JujutsuKaisen';
+  src: url('font/Jujutsu\ Kaisen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  
+.rotar {
+    max-width: 100%;
+    height: auto;
+    animation: girar 10s linear infinite;
+    filter: drop-shadow(0 0 8px #b5c6dc);
+    transform-style: preserve-3d;
+  }
+
+@keyframes girar {
+  from {
+    transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+   }
+
+.container {
+  max-width: 85%;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(23, 33, 40, 0.7); /* #172128 con transparencia */
+  backdrop-filter: blur(10px);       /* desenfoque del fondo */
+  border: 1px solid rgba(255,255,255,0.2); /* borde translúcido */
+}
+
+.inv{
+  font-size: 2.5em;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #f3f7f7; /* color base del texto (cian neón) */
+  text-shadow: 
+    0 0 15px #27343b,   /* halo cercano */
+    0 0 25px #00ffff94,  /* halo medio */
+    0 0 25px #27343b,  /* halo más amplio */
+    0 0 40px #00ffff94;  /* resplandor fuerte */
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 20px #00ffff; }
+  to   { text-shadow: 0 0 35px #00ffff; }
+}
+
+h2 {
+  font-size: 3em;
+  color: #413f3f; /* gris claro como base (plateado) */
+  text-shadow: 
+    0 0 5px #607176,   /* halo blanco cercano */
+    0 0 10px #c0c0c0,  /* gris medio para dar volumen */
+    0 0 15px #607176,  /* gris más oscuro para profundidad */
+    0 0 20px #c0c0c0;  /* resplandor blanco fuerte */
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column; /* coloca texto arriba y icono abajo */
+  align-items: center;    /* centra ambos elementos */
+  gap: 10px;              /* espacio entre ellos */
+}
+
+h2 i {
+  color: #472120;
+  margin-top: 10px;
+}
+
+
+
+p {
+  margin: 10px 0;
+  font-size: 2em; /* aquí aumentas el tamaño */
+}
+
+.trailer {
+  margin-top: 30px;
+}
+
+img {
+  max-width: 100%;  /* nunca será más ancha que su contenedor */
+  height: auto;     /* mantiene la proporción */
+  display: block;   /* evita espacios extra alrededor */
+  margin: 0 auto;   /* opcional: centra la imagen */
+  margin-bottom: 20px; /* agrega espacio debajo de la imagen */
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #27343b;
+  box-shadow: 0 0 20px #27343b;
+  border-radius: 12px;
+}
+
+.icono {
+  margin-top: 5em; /* separa el icono del texto */
+  display: inline-block;
+  font-size: 2em;   /* opcional: agrandar el icono */
+}
+
+
+
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  .inv{
+  font-size: 2.5em;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2em; /* más pequeño para que no se desborde */
+  }
+  p {
+    font-size: 2em;
+  }
+
+}
+
+/* Tablets y laptops */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .inv{
+  font-size: 2.5em;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.8em;
+  }
+  .container {
+    max-width: 80%;
+  }
+}
+
+
+
+
+
